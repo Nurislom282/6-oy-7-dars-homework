@@ -16,7 +16,7 @@ def cars_by_models (request :WSGIRequest,model_id):
     car = Cars.objects.filter(model_id=model_id)
     context ={
         "model":models,
-        'car':car
+        'cars':car
     }
     return render(request,'index.html',context)
 
